@@ -22,13 +22,18 @@ function Navbar() {
   const user = useUser();
 
   return (
-    <nav>
-      <a href="/">Idea tracker</a>
+    <nav className="flex justify-between items-center border-b-2 border-[#A4BF9D] p-4">
+      <a href="/"
+        className="text-3xl font-bold text-[#A4BF9D]"
+      >Idea tracker</a>
       <div>
         {user.current ? (
           <>
-            <span>{user.current.email}</span>
-            <button type="button" onClick={() => user.logout()}>
+            <span className="mr-4 text-lg text-[#A4BF9D]">{user.current.email}</span>
+            <button
+             type="button"
+             className="bg-[#FA2A59] py-2 px-2"
+             onClick={() => user.logout()}>
               Logout
             </button>
           </>
