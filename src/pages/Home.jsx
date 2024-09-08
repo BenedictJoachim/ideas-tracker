@@ -13,7 +13,7 @@ export function Home() {
     <div className="flex">
       {/* Show the submit form to logged in users. */}
       {user.current ? (
-        <section className="mx-auto border py-2 px-4 mt-3 rounded-md">
+        <section className="mx-auto border border-[#A4BF9D] py-2 px-4 mt-3 rounded-md">
           <h2 className="text-xl text-[#A4BF9D]">Submit Idea</h2>
           <form className="flex flex-col w-96 space-y-8 mt-3">
             <input
@@ -45,8 +45,8 @@ export function Home() {
           </form>
         </section>
       ) : (
-        <section className="mx-auto w-96 border py-2 px-4 mt-3 rounded-md">
-          <p>Please login to submit an idea.</p>
+        <section className="mx-auto w-96 py-2 px-4 mt-3 rounded-md">
+          <p className="text-xl text-[#A4BF9D]">Please login to submit an idea.</p>
         </section>
       )}
       <section className="mx-auto w-1/2 py-2 px-4 mt-3 rounded-md">
@@ -60,7 +60,7 @@ export function Home() {
               {user.current && user.current.$id === idea.userId && (
                 <button
                  type="button"
-                 className="bg-[#DF4671] inline text-white rounded-md py-1 px-3"
+                 className="bg-[#DF4671] text-white rounded-md py-1 px-3"
                  onClick={() => ideas.remove(idea.$id)}>
                   Remove
                 </button>

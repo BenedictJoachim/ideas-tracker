@@ -22,7 +22,7 @@ function Navbar() {
   const user = useUser();
 
   return (
-    <nav className="flex justify-between items-center border-b-2 border-[#A4BF9D] p-4">
+    <nav className="flex justify-between items-center border-b border-[#A4BF9D] p-4">
       <a href="/"
         className="text-3xl font-bold text-[#A4BF9D]"
       >Idea tracker</a>
@@ -38,7 +38,7 @@ function Navbar() {
             </button>
           </>
         ) : (
-          <a href="/login">Login</a>
+          <a href="/login" className="mr-4 text-lg text-[#A4BF9D]">Login</a>
         )}
       </div>
     </nav>
